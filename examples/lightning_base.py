@@ -363,8 +363,8 @@ def generic_train(
         train_params["precision"] = 16
         train_params["amp_level"] = args.fp16_opt_level
 
-    if args.gpus > 1:
-        train_params["distributed_backend"] = "ddp"
+    #if args.gpus > 1:
+    #    train_params["distributed_backend"] = "ddp"
 
     trainer = pl.Trainer.from_argparse_args(
         args,
