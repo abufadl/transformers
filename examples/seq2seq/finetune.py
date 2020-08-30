@@ -363,7 +363,7 @@ def main(args, model=None) -> SummarizationModule:
         model,
         args,
         logging_callback=Seq2SeqLoggingCallback(),
-        checkpoint_callback=get_checkpoint_callback(args.output_dir, model.val_metric),
+        #checkpoint_callback=get_checkpoint_callback(args.output_dir, model.val_metric),
         early_stopping_callback=es_callback,
         logger=logger,
         # TODO: early stopping callback seems messed up
