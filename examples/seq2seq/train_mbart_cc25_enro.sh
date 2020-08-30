@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 export PYTHONPATH="../":"${PYTHONPATH}"
 
-python finetune.py \
+#python finetune.py \
+python xla_spawn.py --num_cores 8 \
     --learning_rate=3e-5 \
     --fp16 \
     --do_train \
