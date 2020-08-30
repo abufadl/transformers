@@ -383,10 +383,10 @@ def main(args, model=None) -> SummarizationModule:
     trainer.test()
     return model
 
-#def _mp_fn(index):
+def _mp_fn(index, args):
     # For xla_spawn (TPUs)
 #    pass
-    #main()
+    main(args)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
