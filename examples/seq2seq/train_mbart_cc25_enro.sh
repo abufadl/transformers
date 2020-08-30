@@ -3,7 +3,6 @@ export PYTHONPATH="../":"${PYTHONPATH}"
 
 python finetune.py \
     --learning_rate=3e-5 \
-    --gpu 1 \
     --fp16 \
     --do_train \
     --val_check_interval=0.25 \
