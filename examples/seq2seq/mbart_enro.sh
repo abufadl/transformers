@@ -17,8 +17,6 @@ python finetune.py \
     --freeze_embeds \
     --model_name_or_path=facebook/mbart-large-cc25 \
     --output_dir enro_finetune_baseline \
-    --overwrite_output_dir \
-    --save_steps 20000 \
     --label_smoothing 0.1 \
     --fp16_opt_level=O1 --sortish_sampler --n_train 500 --n_val 100 \
     "$@"
