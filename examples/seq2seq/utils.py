@@ -180,7 +180,7 @@ class Seq2SeqDataset(AbstractSeq2SeqDataset):
             max_length=self.max_source_length,
             max_target_length=self.max_target_length,
             return_tensors="pt",
-            add_prefix_space=self.add_prefix_space,
+            #add_prefix_space=self.add_prefix_space,
         )
         return batch_encoding.data
 
