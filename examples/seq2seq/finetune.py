@@ -383,9 +383,9 @@ def main(args, model=None) -> SummarizationModule:
     trainer.test()
     return model
 
-def _mp_fn(index):
+#def _mp_fn(index):
     # For xla_spawn (TPUs)
-    pass
+#    pass
     #main()
 
 if __name__ == "__main__":
