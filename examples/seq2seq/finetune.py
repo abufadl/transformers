@@ -383,7 +383,7 @@ def main(args, model=None) -> SummarizationModule:
     trainer.test()
     return model
 
-def _mp_fn(index):
+def _mp_fn():
     # For xla_spawn (TPUs)
     main()
 
