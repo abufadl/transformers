@@ -8,7 +8,7 @@ python finetune.py \
     --do_train \
     --val_check_interval=0.25 \
     --adam_eps 1e-06 \
-    --num_train_epochs 1 --src_lang en_XX --tgt_lang ro_RO \
+    --num_train_epochs 3 --src_lang en_XX --tgt_lang ro_RO \
     --data_dir $ENRO_DIR \
     --max_source_length $MAX_LEN --max_target_length $MAX_LEN --val_max_target_length $MAX_LEN --test_max_target_length $MAX_LEN \
     --train_batch_size=$BS --eval_batch_size=$BS \
@@ -18,5 +18,5 @@ python finetune.py \
     --model_name_or_path=facebook/mbart-large-cc25 \
     --output_dir /kaggle/enro_finetune_baseline \
     --label_smoothing 0.1 \
-    --fp16_opt_level=O1 --sortish_sampler --n_train 5000 --n_val 500 \
+    --fp16_opt_level=O1 --sortish_sampler --n_train 10000 --n_val 500 \
     "$@"
