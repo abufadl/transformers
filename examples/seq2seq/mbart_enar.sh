@@ -18,5 +18,5 @@ python finetune.py \
     --model_name_or_path=facebook/mbart-large-cc25 \
     --output_dir /kaggle/enar_finetune_baseline \
     --label_smoothing 0.1 \
-    --fp16_opt_level=O1 --sortish_sampler --n_train 8500 --n_val 550 \
+    --fp16_opt_level=O1 --sortish_sampler --n_train 24500 --n_val 1500 \
     "$@"
