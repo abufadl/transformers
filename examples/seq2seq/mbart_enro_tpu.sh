@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 export PYTHONPATH="../":"${PYTHONPATH}"
 
-python finetune.py --num_cores 8 \
+python finetune.py --output_dir enro_finetune_baseline --tpu_cores 8 \
     --learning_rate=3e-5 \
     --gpus 0 \
     --do_train \
